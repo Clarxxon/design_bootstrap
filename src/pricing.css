@@ -1,0 +1,83 @@
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.container {
+  max-width: 960px;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.gradient {
+  
+  box-shadow: 0 0 41px 0 rgba(0, 0, 0, 0.16);
+  background-image: linear-gradient(66deg, #DD5E89, #F7BB97);
+}
+
+.company-name{
+  background: linear-gradient(66deg, #DD5E89, #F7BB97);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-outline-primary{
+  border-radius: 20px;
+  border-color:  #F7BB97 !important;
+  color: chocolate !important;
+}
+
+.btn-outline-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+  color: #fff;
+  background-color: #DD5E89 !important;
+  border-color: #DD5E89; /*set the color you want here*/
+  color: #fff !important;
+}
+
+.card-deck{
+  margin-top: 80px;
+}
+
+.form-control:focus {
+  border-color: #DD5E89 !important;
+  box-shadow: 0 0 5px #DD5E89 !important;
+}
+
+
+.block{
+  width: 100%;
+  height: 500 px;
+  position: relative;
+  overflow: hidden;
+  font-size: 16px;
+}
+.block h2{
+  position: relative;
+  display: block;
+  text-align: center;
+  margin-top: 200px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10vw;
+  color: white;
+  font-weight: 400;
+}
+.img-parallax {
+  width: 100vmax;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,0);
+  pointer-events: none
+}
