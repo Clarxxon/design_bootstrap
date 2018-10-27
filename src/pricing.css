@@ -81,3 +81,6 @@ html {
   transform: translate(-50%,0);
   pointer-events: none
 }
+.alert-primary{
+  background-image: linear-gradient(66deg, #DD5E89, #F7BB97);
+}
