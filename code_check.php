@@ -3,7 +3,7 @@ ob_start();
     include('db_connection.php');
 
     $code_confirm=strtolower(trim(htmlspecialchars($_POST['code'])));
-    $code_=$_SESSION['code'];
+    $code_=strtolower($_SESSION['captcha']['code']);
     echo($code_);
     echo($code_confirm);
 

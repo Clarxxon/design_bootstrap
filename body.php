@@ -2,6 +2,9 @@
   <?if($_GET["record_done"]==1){?>
     <div class="alert alert-primary" role="alert" style="background-image: linear-gradient(66deg, #DD5E89, #F7BB97); color:black;">
       Вы успешно записались к нам! Мастер скоро вам перезвонит и уточнит время)
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
   <?}?>
 
@@ -49,7 +52,7 @@
                     <ul class="list-unstyled mt-3 mb-4">
                         <?echo($row['s_description'])?>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Записаться</button>
+                    <button id="bottom" type="button" onclick="scrollB()" class="btn btn-lg btn-block btn-outline-primary">Записаться</button>
                     </div>
                 </div>
                        
@@ -93,7 +96,7 @@
           </div>
           <div class="form-group">
               <label for="exampleInputPassword1">Телефон</label>
-              <input type="text" name="phone" class="form-control" id="exampleInputPassword1" placeholder="+71111111111">
+              <input type="text" id="phone" name="phone" class="form-control" id="exampleInputPassword1" placeholder="+71111111111">
           </div>
 
           <div class="form-group">
@@ -111,7 +114,7 @@
 
          
           <button type="submit" style="    margin: auto;
-              display: flex;" class="btn btn-outline-primary">Записаться</button>
+              display: flex;" class="btn btn-outline-primary" onclick="checkForm()">Записаться</button>
         </form>
 
 
@@ -153,3 +156,17 @@
       </div>
     </footer>
   </div>
+
+  <script>
+  function scrollB() {
+    $("html, body").animate({ scrollTop: $(document).height() }, "slow");
+    return false;
+  };
+
+  function checkForm(){
+    var phone=$('#phone').val();
+    if(phone.length<10){
+      alert('Введите корректный номер!');
+    }
+  }
+  </script>
